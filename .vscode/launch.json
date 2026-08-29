@@ -1,0 +1,31 @@
+{
+    // Debug configurations for the AI.Assistance.API
+    // Breakpoints only work WITHOUT --reload (reload starts a subprocess the
+    // debugger does not attach to).
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI: debug /ask (uvicorn, no reload)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "api:app",
+                "--host", "0.0.0.0",
+                "--port", "8000"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Run api.py directly",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/api.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

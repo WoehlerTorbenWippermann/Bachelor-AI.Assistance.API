@@ -1,0 +1,6 @@
+fastapi==0.136.3
+uvicorn==0.48.0
+python-multipart==0.0.30
+google-genai==2.4.0
+pillow==12.2.0
+gTTS==2.5.4
